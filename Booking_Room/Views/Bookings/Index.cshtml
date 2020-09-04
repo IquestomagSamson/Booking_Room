@@ -36,7 +36,7 @@
                         <th>Room ID</th>
                         <th>User ID</th>
                         <th></th>
-                        <th></th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -64,15 +64,20 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.users_id)
                         </td>
+                        
                         <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.room_id }) |
+                            @*@Html.ActionLink("Edit", "Edit", new { id = item.room_id }) |
                             @Html.ActionLink("Details", "Details", new { id = item.room_id }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.room_id })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.room_id })*@
+                            <ul class="list-inline m-0">
+                                
+                                <li class="list-inline-item">
+                                    <button class="btn btn-success btn-sm rounded-0" type="button" title="Edit"><i class="fa fa-edit"><a href="@Url.Action("Edit", "Bookings", new { id = item.room_id })"></a></i></button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                                </li>
+                            </ul>
                         </td>
                     </tr>
                     }

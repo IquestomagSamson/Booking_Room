@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Booking.Models.Entities
 {
-    [Table("Room")]
-    public class Users
+    [Table("Users_s")]
+    public class User_s
     {
         [Key]
         [StringLength(10)]

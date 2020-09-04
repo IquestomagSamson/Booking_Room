@@ -48,7 +48,7 @@ namespace Booking_Room.Models.DbContext
         [Required]
         [StringLength(10)]
         [Display(Name = "User ID")]
-        public string users_id { get; set; }
+        public string User_id { get; set; }
 
         public virtual Room Room { get; set; }
 
