@@ -1,31 +1,123 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+@section scripts
+    {
+    <div class="w3l-main-slider">
+        <!-- main-slider -->
+        <div class="companies20-content">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            <div class="owl-one owl-carousel owl-theme">
+                <div class="item">
+                    <li>
+                        <div class="slider-info banner-view bg bg2" data-selector=".bg.bg2">
+                            <div class="banner-info">
+                                <div class="container">
+                                    <div class="banner-info-bg mx-auto text-center">
+                                        <h5>Better Create A New Meeting For Your Schedule</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="item">
+                    <li>
+                        <div class="slider-info banner-view banner-top2 bg bg2" data-selector=".bg.bg2">
+                            <div class="banner-info">
+                                <div class="container">
+                                    <div class="banner-info-bg mx-auto text-center">
+                                        <h5>Create A New User In Your System</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="item">
+                    <li>
+                        <div class="slider-info banner-view banner-top3 bg bg2" data-selector=".bg.bg2">
+                            <div class="banner-info">
+                                <div class="container">
+                                    <div class="banner-info-bg mx-auto text-center">
+                                        <h5>Add A New Meeting Room If Your Company Scales</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script src="~/assets/js/owl.carousel.js"></script>
+        <!-- script for -->
+        <script>
+            $(document).ready(function () {
+                $('.owl-one').owlCarousel({
+                    loop: true,
+                    margin: 0,
+                    nav: false,
+                    responsiveClass: true,
+                    autoplay: false,
+                    autoplayTimeout: 5000,
+                    autoplaySpeed: 1000,
+                    autoplayHoverPause: false,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: false
+                        },
+                        480: {
+                            items: 1,
+                            nav: false
+                        },
+                        667: {
+                            items: 1,
+                            nav: true
+                        },
+                        1000: {
+                            items: 1,
+                            nav: true
+                        }
+                    }
+                })
+            })
+        </script>
+}
+@section scripts2
+        {
+    <div class="w3l-feature-3">
+        <div class="grid top-bottom mb-lg-5 pb-lg-5">
+            <div class="container">
+
+                <div class="middle-section grid-column text-center">
+                    <div class="three-grids-columns">
+                        <span class="fa fa-laptop"></span>
+                        <h4>Learn Courses Online</h4>
+                        <p>Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet</p>
+                        <a href="services.html" class="btn btn-secondary btn-theme3 mt-4">Read More </a>
+                    </div>
+                    <div class="three-grids-columns">
+                        <span class="fa fa-users"></span>
+                        <h4>Highly Qualified Teachers</h4>
+                        <p>Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet</p>
+                        <a href="services.html" class="btn btn-secondary btn-theme3 mt-4">Read More </a>
+                    </div>
+                    <div class="three-grids-columns">
+                        <span class="fa fa-book"></span>
+                        <h4>Book Library & Stores</h4>
+                        <p>Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet</p>
+                        <a href="services.html" class="btn btn-secondary btn-theme3 mt-4">Read More </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+}

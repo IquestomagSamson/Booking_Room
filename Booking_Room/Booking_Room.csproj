@@ -156,6 +156,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BookingsController.cs" />
+    <Compile Include="Controllers\Functions\Booking_CF.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -176,6 +177,36 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\style-starter.css" />
+    <Content Include="assets\css\Table.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\images\1.jpg" />
+    <Content Include="assets\images\2.jpg" />
+    <Content Include="assets\images\3.jpg" />
+    <Content Include="assets\images\4.jpg" />
+    <Content Include="assets\images\5.jpg" />
+    <Content Include="assets\images\c1.jpg" />
+    <Content Include="assets\images\c2.jpg" />
+    <Content Include="assets\images\c3.jpg" />
+    <Content Include="assets\images\fern_leaves_green_123899_300x168.jpg" />
+    <Content Include="assets\images\g1.jpg" />
+    <Content Include="assets\images\g10.jpg" />
+    <Content Include="assets\images\g2.jpg" />
+    <Content Include="assets\images\g3.jpg" />
+    <Content Include="assets\images\g4.jpg" />
+    <Content Include="assets\images\g5.jpg" />
+    <Content Include="assets\images\g6.jpg" />
+    <Content Include="assets\images\g7.jpg" />
+    <Content Include="assets\images\g8.jpg" />
+    <Content Include="assets\images\g9.jpg" />
+    <Content Include="assets\images\t1.jpg" />
+    <Content Include="assets\images\t2.jpg" />
+    <Content Include="assets\images\t3.jpg" />
+    <Content Include="assets\images\t4.jpg" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-3.3.1.min.js" />
+    <Content Include="assets\js\owl.carousel.js" />
+    <Content Include="assets\js\smoothscroll.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -187,6 +218,11 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

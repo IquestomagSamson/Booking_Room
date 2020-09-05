@@ -16,11 +16,13 @@ namespace Booking_Room.Models.DbContext
 
         [Key]
         [StringLength(10)]
-        public string users_id { get; set; }
+        [Display(Name = "User ID")]
+        public string User_id { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string users_name { get; set; }
+        [Display(Name = "User's name")]
+        public string User_name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Booking> Bookings { get; set; }

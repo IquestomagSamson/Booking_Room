@@ -28,7 +28,7 @@ namespace Booking_Room.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Users users = db.Users.Find(id);
+            User_s users = db.Users.Find(id);
             if (users == null)
             {
                 return HttpNotFound();
@@ -47,7 +47,7 @@ namespace Booking_Room.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "User_id,User_name")] Users users)
+        public ActionResult Create([Bind(Include = "User_id,User_name")] User_s users)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +66,7 @@ namespace Booking_Room.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Users users = db.Users.Find(id);
+            User_s users = db.Users.Find(id);
             if (users == null)
             {
                 return HttpNotFound();
@@ -79,7 +79,7 @@ namespace Booking_Room.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "User_id,User_name")] Users users)
+        public ActionResult Edit([Bind(Include = "User_id,User_name")] User_s users)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace Booking_Room.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Users users = db.Users.Find(id);
+            User_s users = db.Users.Find(id);
             if (users == null)
             {
                 return HttpNotFound();
@@ -110,7 +110,7 @@ namespace Booking_Room.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Users users = db.Users.Find(id);
+            User_s users = db.Users.Find(id);
             db.Users.Remove(users);
             db.SaveChanges();
             return RedirectToAction("Index");

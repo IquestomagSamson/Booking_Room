@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Booking.Models.Entities.Users>
+﻿@model IEnumerable<Booking.Models.Entities.User_s>
 
 @{
     ViewBag.Title = "Index";
@@ -24,9 +24,10 @@
             @Html.DisplayFor(modelItem => item.User_name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.User_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.User_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.User_id })
+            
+            @Html.ActionLink("Edit", "Edit", new { id=item.User_id.Trim() }) |
+            @Html.ActionLink("Details", "Details", new { id=item.User_id.Trim() }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.User_id.Trim() })
         </td>
     </tr>
 }

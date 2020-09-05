@@ -19,6 +19,6 @@ namespace Booking_Room.Data
         {
         }
 
-        public System.Data.Entity.DbSet<Booking.Models.Entities.Users> Users { get; set; }
+        public System.Data.Entity.DbSet<Booking.Models.Entities.User_s> Users { get; set; }
     }
 }

@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Razor.Tokenizer.Symbols;
 using Booking.Models.Entities;
+using Booking_Room.Controllers.Functions;
 using Booking_Room.Data;
+using Booking_Room.Models.DbContext;
 
 namespace Booking_Room.Controllers
 {
     public class BookingsController : Controller
     {
         private BookingContext db = new BookingContext();
-
+        private RoomContext db1 = new RoomContext();
         // GET: Bookings
         public ActionResult Index()
         {
@@ -35,10 +39,11 @@ namespace Booking_Room.Controllers
             }
             return View(bookings);
         }
-
+       
         // GET: Bookings/Create
         public ActionResult Create()
         {
+            
             return View();
         }
 
@@ -124,5 +129,7 @@ namespace Booking_Room.Controllers
             }
             base.Dispose(disposing);
         }
+        
+
     }
 }

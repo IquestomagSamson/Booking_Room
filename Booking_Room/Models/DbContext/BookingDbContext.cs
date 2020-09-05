@@ -30,7 +30,7 @@ namespace Booking_Room.Models.DbContext
                 .IsUnicode(false);
 
             modelBuilder.Entity<Booking>()
-                .Property(e => e.users_id)
+                .Property(e => e.User_id)
                 .IsFixedLength()
                 .IsUnicode(false);
 
@@ -45,7 +45,7 @@ namespace Booking_Room.Models.DbContext
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<User_s>()
-                .Property(e => e.users_id)
+                .Property(e => e.User_id)
                 .IsFixedLength()
                 .IsUnicode(false);
 
