@@ -28,7 +28,7 @@
                 <thead>
                     <tr>
 
-                        <th>Bookiing title <i class="fa fa-sort"></i></th>
+                        <th>Booking title <i class="fa fa-sort"></i></th>
                         <th>Start time</th>
                         <th>End time</i></th>
                         <th>Participants</th>
@@ -36,50 +36,50 @@
                         <th>Room ID</th>
                         <th>User ID</th>
                         <th></th>
-                        
+
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.booking_title)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.start_time)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.end_time)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.participants)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.note)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.room_id)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.users_id)
-                        </td>
-                        
-                        <td>
-                            @*@Html.ActionLink("Edit", "Edit", new { id = item.room_id }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.room_id }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.room_id })*@
-                            <ul class="list-inline m-0">
-                                
-                                <li class="list-inline-item">
-                                    <button class="btn btn-success btn-sm rounded-0" type="button" title="Edit"><i class="fa fa-edit"><a href="@Url.Action("Edit", "Bookings", new { id = item.room_id })"></a></i></button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.booking_title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.start_time)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.end_time)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.participants)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.note)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.room_id)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.users_id)
+                            </td>
+
+                            <td>
+                                @*@Html.ActionLink("Edit", "Edit", new { id = item.room_id.Trim() }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.room_id.Trim() }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.room_id.Trim() })*@
+                                <ul class="list-inline m-0">
+
+                                    <li class="list-inline-item">
+                                         @Html.ActionLink("Edit", "Edit", new { id = item.Booking_id.Trim() }, new { @class= "btn btn-success btn-sm rounded-0 " })                                        
+                                    </li>
+                                    <li class="list-inline-item">                                        
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.Booking_id.Trim() }, new { @class = "btn btn-danger btn-sm rounded-0 " })
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
                     }
 
                 </tbody>

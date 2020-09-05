@@ -1,4 +1,4 @@
-﻿@model Booking.Models.Entities.Users
+﻿@model Booking.Models.Entities.User_s
 
 @{
     ViewBag.Title = "Details";
@@ -22,7 +22,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.User_id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.User_id.Trim() }) |
     <div class="btn btn-link">
         <h4 style="color:darkturquoise">@Html.ActionLink("Back to List", "Index")</h4>
     </div>

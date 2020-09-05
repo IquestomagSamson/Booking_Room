@@ -30,7 +30,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.room_id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.room_id.Trim() }) |
     <div class="btn btn-link">
         <h4 style="color:darkturquoise">@Html.ActionLink("Back to List", "Index")</h4>
     </div>

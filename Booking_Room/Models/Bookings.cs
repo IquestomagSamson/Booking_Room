@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Booking_Room.Models.DbContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -42,6 +43,7 @@ namespace Booking.Models.Entities
         [StringLength(10)]
         [Display(Name = "User ID")]
         public string users_id { get; set; }
-
+        [NotMapped]
+        public List<Room> RoomsCollection { get; set; }
     }
 }

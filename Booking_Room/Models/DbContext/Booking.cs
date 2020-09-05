@@ -1,10 +1,13 @@
 namespace Booking_Room.Models.DbContext
 {
+    using Booking_Room.Data;
+    using Microsoft.ApplicationInsights.Extensibility.Implementation;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("Booking")]
     public partial class Booking
@@ -53,5 +56,8 @@ namespace Booking_Room.Models.DbContext
         public virtual Room Room { get; set; }
 
         public virtual User_s User_s { get; set; }
+
+        [NotMapped]
+        public List<Room> RoomsCollection { get; set; }
     }
 }
